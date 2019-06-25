@@ -3,7 +3,10 @@ package tutorials;
 
 public class LinkedList<T> implements List<T> {
     
-    
+    public LinkedList() {
+        first = null;
+        size = 0;
+    }
 
     private LinkedNode<T> first;
     private int size = 0;
@@ -12,30 +15,31 @@ public class LinkedList<T> implements List<T> {
         LinkedNode<T> toAdd = new LinkedNode<T>(item);
         if (first == null) {
             first = toAdd;
+        } else {
+            LinkedNode<T> cursor = first;
+            while(cursor.next != null) {
+                cursor = cursor.next;
+            }
+            cursor.next = toAdd;
         }
-        LinkedNode<T> cursor = first;
-        while(cursor.next != null) {
-            cursor = cursor.next;
-        }
-        cursor.next = toAdd;
         size++;
     }
 
     public void remove(T item) {
-        if(first != null && first != item) {
+        if(first != null && !first.value.equals(item)) {
             LinkedNode<T> cursor = first;
-            LinkedNode<T> pcursor = cursor;
+            LinkedNode<T> previous = cursor;
             cursor = cursor.next;
-            while(cursor.value != item && cursor != null) {
-                pcursor = cursor;
+            while(cursor != null && !cursor.value.equals(item)) {
+                previous = cursor;
                 cursor = cursor.next;
             }
             if(cursor != null) {
-                pcursor.next = cursor.next;
+                previous.next = cursor.next;
                 size--;
             }
             
-        } else if(first == item) {
+        } else if(first.value.equals(item)) {
             first = first.next;
             size--;
         }
@@ -83,7 +87,7 @@ public class LinkedList<T> implements List<T> {
         int index = 0;
         LinkedNode<T> cursor = first;
         while(cursor != null) {
-            if(cursor.value == item) { return index; }
+            if(cursor.value.equals(item)) { return index; }
             index++;
             cursor = cursor.next;
         }
@@ -92,12 +96,7 @@ public class LinkedList<T> implements List<T> {
 
 
     public boolean contains(T item) {
-        LinkedNode<T> cursor = first;
-        while(cursor != null) {
-            if(cursor.value == item) { return true; }
-            cursor = cursor.next;
-        }
-        return false;
+        return this.indexOf(item) != -1;
     }
 
 
@@ -118,7 +117,7 @@ class LinkedNode<T> {
 
     LinkedNode<T> next;
 
-    public LinkedNode(T value) { this(value, null); }
+    public LinkedNode(T value) { this.value = value; this.next = null; }
 
     public LinkedNode(T value, LinkedNode<T> next) { this.value = value; this.next = next; }
 

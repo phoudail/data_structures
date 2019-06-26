@@ -3,13 +3,15 @@ package tutorials;
 
 public class LinkedList<T> implements List<T> {
     
+    private LinkedNode<T> first;
+    private int size = 0;
+
+
     public LinkedList() {
         first = null;
         size = 0;
     }
-
-    private LinkedNode<T> first;
-    private int size = 0;
+    
 
     public void add(T item) {
         LinkedNode<T> toAdd = new LinkedNode<T>(item);
@@ -25,6 +27,7 @@ public class LinkedList<T> implements List<T> {
         size++;
     }
 
+
     public void remove(T item) {
         if(first != null && !first.value.equals(item)) {
             LinkedNode<T> cursor = first;
@@ -37,8 +40,7 @@ public class LinkedList<T> implements List<T> {
             if(cursor != null) {
                 previous.next = cursor.next;
                 size--;
-            }
-            
+            }  
         } else if(first.value.equals(item)) {
             first = first.next;
             size--;

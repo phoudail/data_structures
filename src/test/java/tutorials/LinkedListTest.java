@@ -1,10 +1,6 @@
 package tutorials;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
-import java.beans.BeanProperty;
-
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -29,14 +25,22 @@ public class LinkedListTest {
         list.add(7);
         int t = list.get(0);
         int t2 = list.get(1);
-        assertEquals(5, t);
-        assertEquals(7, t2);
-        assertEquals(2, list.size());
+        assertEquals("The first value wasn't added.", 5, t);
+        assertEquals("The second value wasn't added.", 7, t2);
+        assertEquals("The list size didn't update properly.", 2, list.size());
     }
 
     @Test
     public void sizeTest() {
-        assertEquals(0, list.size());
+        assertEquals("The list's size at construction isn't 0.", 0, list.size());
+        list.add(7);
+        list.add(9);
+        list.add(12);
+        list.remove(7);
+        assertEquals("The list's size doesn't update properly.", 2, list.size());
+        LinkedList<Integer> list2 = new LinkedList<Integer>();
+        assertEquals("Creating a new list changes existing lists' sizes.", 2, list.size());
+        assertEquals("A new list's size isn't 0.", 0, list2.size());
     } 
 
     @Test
@@ -47,9 +51,11 @@ public class LinkedListTest {
         list.add(7);
         list.remove(7);
         boolean t = list.contains(7);
-        assertTrue(list.get(1) != 7);
-        assertEquals(3, list.size());
-        assertTrue(t);
+        assertTrue("The first occurence of the element wasn't removed.", list.get(1) != 7);
+        assertEquals("The list size didn't update properly.", 3, list.size());
+        assertTrue("All occurences of the element were removed, not just the first.", t);
+        list.remove(9);
+        assertEquals("Attempting to remove an element that doesn't occur changes the list.", 3, list.size());
     }
 
     @Test
@@ -60,8 +66,8 @@ public class LinkedListTest {
         list.add(7);
         list.removeAll(7);
         boolean t = list.contains(7);
-        assertEquals(2, list.size());
-        assertTrue(!t);
+        assertTrue("Not all occurences of the element were removed.", !t);
+        assertEquals("The list's size wasn't updated properly.", 2, list.size());
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
@@ -80,9 +86,9 @@ public class LinkedListTest {
         int t0 = list.get(0);
         int t1 = list.get(1);
         int t2 = list.get(2);
-        assertEquals(5, t0);
-        assertEquals(7, t1);
-        assertEquals(3, t2);
+        assertEquals("The first value wasn't properly returned.", 5, t0);
+        assertEquals("The second value wasn't properly returned.", 7, t1);
+        assertEquals("The last value wasn't properly returned.", 3, t2);
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
@@ -99,8 +105,8 @@ public class LinkedListTest {
         list.add(7);
         list.add(3);
         list.set(1, 9);
-        assertEquals(3, list.size());
-        assertEquals(1, list.indexOf(9));
+        assertEquals("The list size changed although it shouldn't have.", 3, list.size());
+        assertEquals("The element wasn't properly modified.", 1, list.indexOf(9));
     }
 
     @Test
@@ -108,25 +114,26 @@ public class LinkedListTest {
         list.add(5);
         list.add(7);
         list.add(3);
-        assertEquals(0, list.indexOf(5));
-        assertEquals(-1, list.indexOf(9));
+        assertEquals("The first element wasn't found.", 0, list.indexOf(5));
+        assertEquals("The last element wasn't found.", 2, list.indexOf(3));
+        assertEquals("An element that isn't in the list was found.", -1, list.indexOf(9));
     }
 
     @Test
     public void containsTest() {
-        assertTrue(!list.contains(9));
+        assertTrue("An empty list returned that it contained something.", !list.contains(9));
         list.add(9);
         list.add(7);
         list.add(43);
-        assertTrue(list.contains(7));
-        assertTrue(!list.contains(4));
+        assertTrue("An element that occurs in the list wasn't found.", list.contains(7));
+        assertTrue("An element that doesn't exist in the list was found.", !list.contains(4));
     }
 
     @Test
     public void isEmptyTest() {
-        assertTrue(list.isEmpty());
+        assertTrue("An empty list was found not empty.", list.isEmpty());
         list.add(5);
-        assertTrue(!list.isEmpty());
+        assertTrue("A list with one element returned that it was empty." ,!list.isEmpty());
     }
 
 }

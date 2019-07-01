@@ -17,7 +17,6 @@ public class LinkedListTest {
     public void init() {
         list = new LinkedList<Integer>();
     }
-
  
     @Test
     public void addTest() {
@@ -45,17 +44,25 @@ public class LinkedListTest {
 
     @Test
     public void removeTest() {
+        list.remove(4);
         list.add(5);
         list.add(7);
         list.add(3);
         list.add(7);
+        list.add(12);
         list.remove(7);
         boolean t = list.contains(7);
         assertTrue("The first occurence of the element wasn't removed.", list.get(1) != 7);
-        assertEquals("The list size didn't update properly.", 3, list.size());
+        assertEquals("The list size didn't update properly.", 4, list.size());
         assertTrue("All occurences of the element were removed, not just the first.", t);
         list.remove(9);
-        assertEquals("Attempting to remove an element that doesn't occur changes the list.", 3, list.size());
+        assertEquals("Attempting to remove an element that doesn't occur changes the list.", 4, list.size());
+        list.remove(5);
+        assertTrue("The first element of the list wasn't removed.", !list.contains(5));
+        assertEquals("The list size wasn't updated properly after removal of first element.", 3, list.size());
+        list.remove(12);
+        assertTrue("The first element of the list wasn't removed.", !list.contains(12));
+        assertEquals("The list size wasn't updated properly after removal of last element.", 2, list.size());
     }
 
     @Test
@@ -75,7 +82,7 @@ public class LinkedListTest {
         list.add(5);
         list.add(7);
         list.add(3);
-        int t3 = list.get(3);
+        list.get(3);
     }
 
     @Test
@@ -133,7 +140,7 @@ public class LinkedListTest {
     public void isEmptyTest() {
         assertTrue("An empty list was found not empty.", list.isEmpty());
         list.add(5);
-        assertTrue("A list with one element returned that it was empty." ,!list.isEmpty());
+        assertTrue("A list with one element returned that it was empty.", !list.isEmpty());
     }
 
 }

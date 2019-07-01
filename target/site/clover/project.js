@@ -1,0 +1,2 @@
+processClover (  {"children":["tutorials/"],"name":"Clover database Thu Jun 27 2019 12:51:36 CEST","stats":{"AvgMethodComplexity":2.32,"Complexity":58,"ErroneousTests":0,"FailingTests":0,"FilteredElements":0,"PassingTests":0,"PcErroneousTests":-1,"PcFailingTests":-1,"PcPassingTests":-1,"TestExecutionTime":0,"Tests":0,"TotalChildren":1,"TotalPercentageCovered":95.287964,"TotalStatements":116,"UncoveredElements":9},"title":"tutorials 1.0-SNAPSHOT"}
+ ); 

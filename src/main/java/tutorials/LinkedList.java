@@ -11,7 +11,7 @@ public class LinkedList<T> implements List<T> {
         first = null;
         size = 0;
     }
-    
+
 
     public void add(T item) {
         LinkedNode<T> toAdd = new LinkedNode<T>(item);
@@ -41,7 +41,7 @@ public class LinkedList<T> implements List<T> {
                 previous.next = cursor.next;
                 size--;
             }  
-        } else if(first.value.equals(item)) {
+        } else if(first != null && first.value.equals(item)) {
             first = first.next;
             size--;
         }
@@ -49,11 +49,9 @@ public class LinkedList<T> implements List<T> {
 
 
     public void removeAll(T item) {
-        int previousSize = size;
-        do {
-            previousSize = size;
-            remove(item);
-        } while(previousSize != size);
+        while(this.contains(item)) {
+            this.remove(item);
+        }
     }
 
 

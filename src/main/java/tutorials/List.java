@@ -19,6 +19,7 @@ public interface List<T> {
     // Removes the first occurence of item
     void remove(T item);
 
+    // Removes all occurences of item
     void removeAll(T item);
 
     T get (int index);

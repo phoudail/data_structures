@@ -21,12 +21,17 @@ public class StackArray<T> implements Stack<T> {
     }
 
     public void pop() {
-        array[top] = null;
-        top--;
+        if(top > -1) {
+            array[top] = null;
+            top--;
+        }
     }
 
     public T peek() {
-        return array[top].value;
+        if(top > -1) {
+            return array[top].value;
+        }
+        return null;
     }
 
     public int size() {

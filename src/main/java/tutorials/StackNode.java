@@ -14,11 +14,12 @@ public class StackNode<T> implements Stack<T> {
     }
 
     public void pop() {
-        last = last.next;
+        if(last != null) { last = last.next; size--; }
     }
 
     public T peek() {
-        return last.value;
+        if(last != null) { return last.value; }
+        return null;
     }
 
     public int size() {

@@ -15,7 +15,7 @@ public class StackArray<T> implements Stack<T> {
     public void push(T item) {
         top++;
         if(top >= array.length) {
-            array = Arrays.copyOf(array, array.length + 1);
+            array = Arrays.copyOf(array, array.length * 2);
         }
         array[top] = new Box<T>(item);
     }

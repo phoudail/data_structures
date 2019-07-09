@@ -1,6 +1,9 @@
 package tutorials;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+
+import java.util.NoSuchElementException;
+
 import org.junit.Test;
 import org.junit.Before;
 
@@ -11,11 +14,6 @@ public class HashTableTest {
     @Before
     public void init() {
         t = new HashTable<String, Integer>();
-    }
-
-    @Test
-    public void constrTest() {
-        assertEquals("The hash table has more than 0 elements at construction.", 0, t.size());
     }
 
     @Test
@@ -56,5 +54,15 @@ public class HashTableTest {
             t.put("test" + i, i);
         }
         assertEquals("The table didn't rehash properly", 20, t.arraySize());
+    }
+
+    @Test(expected = NoSuchElementException.class)
+    public void getExceptTest() {
+        t.get("test");
+    }
+
+    @Test
+    public void containsEmptyTest() {
+        assertTrue("The table returned that it contained something although it is empty.", !t.contains("anothertest"));
     }
 }

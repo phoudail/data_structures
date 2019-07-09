@@ -25,7 +25,7 @@ public class HashTable<K, V> {
     }
 
     public boolean contains(K key) {
-        int hashCode = key.hashCode();
+        int hashCode = Math.abs(key.hashCode());
         DoubleNode<K, V> cursor = array[hashCode%array.length];
         while(cursor != null) {
             if(cursor.key.equals(key)) { return true; }
@@ -65,7 +65,7 @@ public class HashTable<K, V> {
 
 
     public V get(K key) {
-        int hashCode = key.hashCode();
+        int hashCode = Math.abs(key.hashCode());
         DoubleNode<K, V> cursor = array[hashCode%array.length];
         while(cursor != null) {
             if(cursor.key.equals(key)) { return cursor.value; }

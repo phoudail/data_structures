@@ -6,10 +6,7 @@ package tutorials;
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
-        HashTable<String, Integer> test = new HashTable<String, Integer>();
-        test.put("test", 6);
+    public static void main( String[] args ) {
         System.out.println( "Hello World!" );
     }
 }

@@ -54,6 +54,10 @@ public class HashTableTest {
             t.put("test" + i, i);
         }
         assertEquals("The table didn't rehash properly", 20, t.arraySize());
+        for(int i = 0; i > 55; i++) {
+            int tmp = t.get("test" + i);
+            assertEquals("Element number " + i + " wasn't rehashed properly.", tmp, i);
+        }
     }
 
     @Test(expected = NoSuchElementException.class)

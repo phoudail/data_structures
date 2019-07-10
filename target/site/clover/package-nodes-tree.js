@@ -9,7 +9,7 @@ var Packages = {
     "text": "tutorials",
     "package": "tutorials",
     "url": "tutorials/pkg-summary.html",
-            "coverage": "95.6%",
+            "coverage": "95.5%",
         "icon": "aui-icon aui-icon-small aui-iconfont-devtools-folder-closed",
             "li_attr": {"data-is-link": "true"},
         "a_attr": {"href": "tutorials/pkg-summary.html"},

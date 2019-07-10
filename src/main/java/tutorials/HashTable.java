@@ -7,26 +7,39 @@ public class HashTable<K, V> {
 
     private DoubleNode<K, V>[] array;
     private int[] loadArray;
-    private int maxLoad;
     private double loadFactor;
+    
+    final static int DEFAULT_CAPACITY = 10;
+    final static double  DEFAULT_LOAD_FACTOR = .5;
 
     public HashTable() {
-        this.array = new DoubleNode[10];
-        this.loadArray = new int[10];
-        this.maxLoad = 0;
-        this.loadFactor = 0.5;
+        this(DEFAULT_CAPACITY, DEFAULT_LOAD_FACTOR);
+    }
+
+    public HashTable(int capacity) {
+        this(capacity, DEFAULT_LOAD_FACTOR);
+
     }
 
     public HashTable(double loadFactor) {
-        this.array = new DoubleNode[10];
-        this.loadArray = new int[10];
-        this.maxLoad = 0;
+        this(DEFAULT_CAPACITY, loadFactor);
+    }
+
+    public HashTable(int capacity, double loadFactor) {
+        this.array = new DoubleNode[capacity];
+        this.loadArray = new int[capacity];
         this.loadFactor = loadFactor;
+
+    }
+
+    private int getIndex(K key) {
+        int hashCode = Math.abs(key.hashCode());
+        return hashCode%array.length;
     }
 
     public boolean contains(K key) {
-        int hashCode = Math.abs(key.hashCode());
-        DoubleNode<K, V> cursor = array[hashCode%array.length];
+        int index = getIndex(key);
+        DoubleNode<K, V> cursor = array[index]];
         while(cursor != null) {
             if(cursor.key.equals(key)) { return true; }
             cursor = cursor.next;
@@ -35,38 +48,43 @@ public class HashTable<K, V> {
     }
 
     public void put(K key, V value) {
-        int hashCode = key.hashCode();
-        int index = Math.abs(hashCode%array.length);
+        int index = getIndex(key);
         DoubleNode<K, V> cursor = array[index];
-        boolean done = false;
-        if(cursor == null) {
-            array[index] = new DoubleNode<K, V>(key, value);
-            done = true;
-            loadArray[index]++;
-        }
-        while(!done && cursor.next != null) {
-            if(cursor.key.equals(key)) { cursor.value = value; done = true; }
+        while(cursor != null && !cursor.key.equals(key)) {
             cursor = cursor.next;
         }
-        if(!done) {
-            if(cursor.key.equals(key)) {
-                cursor.value = value; 
-            } else {
-                cursor.next = new DoubleNode<K, V>(key, value);
-                loadArray[index]++;
-            }
+        if(cursor == null) {
+            DoubleNode<K, V> toAdd = new DoubleNode<K, V>(key, value, array[index]);
+            array[index] = toAdd;
+            loadArray[index]++;
+        } else {
+            cursor.value = value;
         }
-        if(loadArray[index] > maxLoad) { maxLoad = loadArray[index]; }
-        
-        if( ((double) this.maxLoad)/array.length > this.loadFactor) {
+        if( ((double) loadArray[index])/array.length > loadFactor) {
             this.rehash();
         }
     }
 
+    public void remove(K key) {
+        int index = getIndex(key);
+        DoubleNode<K, V> cursor = array[index];
+        if(cursor != null) {
+            DoubleNode<K, V> previous = array[index];
+            cursor = cursor.next;
+            while(cursor != null && !cursor.key.equals(key)) {
+                previous = previous.next;
+                cursor = cursor.next;
+            }
+            if(cursor != null) {
+                previous.next = cursor.next;
+                loadArray[index]--;
+            }
+        }
+    }
 
     public V get(K key) {
-        int hashCode = Math.abs(key.hashCode());
-        DoubleNode<K, V> cursor = array[hashCode%array.length];
+        int index = getIndex(key);
+        DoubleNode<K, V> cursor = array[index];
         while(cursor != null) {
             if(cursor.key.equals(key)) { return cursor.value; }
             cursor = cursor.next;
@@ -79,7 +97,6 @@ public class HashTable<K, V> {
         DoubleNode<K, V>[] transitionArray = Arrays.copyOf(array, array.length);
         this.array = new DoubleNode[newSize];
         this.loadArray = new int[newSize];
-        maxLoad = 0;
         for(int i = 0; i > transitionArray.length-1; i++) {
             DoubleNode<K, V> cursor = transitionArray[i];
             while(cursor != null) {
@@ -91,7 +108,6 @@ public class HashTable<K, V> {
     public int arraySize() {
         return array.length;
     }
-
 }
 
 

@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1562677745742" clover="4.3.1">
-   <project name="tutorials 1.0-SNAPSHOT" timestamp="1562677741989">
-      <metrics coveredelements="368" complexity="117" loc="609" methods="57" classes="16" statements="242" packages="1" coveredconditionals="96" coveredmethods="52" elements="401" ncloc="450" files="11" conditionals="102" coveredstatements="220"/>
+<coverage generated="1562680187691" clover="4.3.1">
+   <project name="tutorials 1.0-SNAPSHOT" timestamp="1562680183969">
+      <metrics coveredelements="368" complexity="117" loc="606" methods="57" classes="16" statements="240" packages="1" coveredconditionals="96" coveredmethods="52" elements="399" ncloc="447" files="11" conditionals="102" coveredstatements="220"/>
       <package name="tutorials">
-         <metrics coveredelements="368" complexity="117" loc="609" methods="57" classes="16" statements="242" coveredconditionals="96" coveredmethods="52" elements="401" ncloc="450" files="11" conditionals="102" coveredstatements="220"/>
+         <metrics coveredelements="368" complexity="117" loc="606" methods="57" classes="16" statements="240" coveredconditionals="96" coveredmethods="52" elements="399" ncloc="447" files="11" conditionals="102" coveredstatements="220"/>
          <file path="/home/phoudail/Projects/tutorials/src/main/java/tutorials/App.java" name="App.java">
-            <metrics coveredelements="0" coveredconditionals="0" complexity="1" loc="15" coveredmethods="0" methods="1" elements="4" classes="1" ncloc="10" statements="3" conditionals="0" coveredstatements="0"/>
+            <metrics coveredelements="0" coveredconditionals="0" complexity="1" loc="12" coveredmethods="0" methods="1" elements="2" classes="1" ncloc="7" statements="1" conditionals="0" coveredstatements="0"/>
             <class name="App">
-               <metrics coveredelements="0" coveredconditionals="0" complexity="1" coveredmethods="0" methods="1" elements="4" statements="3" conditionals="0" coveredstatements="0"/>
+               <metrics coveredelements="0" coveredconditionals="0" complexity="1" coveredmethods="0" methods="1" elements="2" statements="1" conditionals="0" coveredstatements="0"/>
             </class>
             <line complexity="1" visibility="public" signature="main(String[]) : void" num="9" count="0" type="method"/>
-            <line num="11" count="0" type="stmt"/>
-            <line num="12" count="0" type="stmt"/>
-            <line num="13" count="0" type="stmt"/>
+            <line num="10" count="0" type="stmt"/>
          </file>
          <file path="/home/phoudail/Projects/tutorials/src/main/java/tutorials/HashTable.java" name="HashTable.java">
             <metrics coveredelements="73" coveredconditionals="20" complexity="23" loc="115" coveredmethods="7" methods="9" elements="95" classes="2" ncloc="96" statements="60" conditionals="26" coveredstatements="46"/>
@@ -437,18 +435,18 @@
          </file>
       </package>
    </project>
-   <testproject name="tutorials 1.0-SNAPSHOT" timestamp="1562677741989">
-      <metrics coveredelements="354" complexity="52" loc="585" methods="47" classes="7" statements="297" packages="1" coveredconditionals="10" coveredmethods="47" elements="354" ncloc="493" files="7" conditionals="10" coveredstatements="297"/>
+   <testproject name="tutorials 1.0-SNAPSHOT" timestamp="1562680183969">
+      <metrics coveredelements="356" complexity="53" loc="589" methods="47" classes="7" statements="300" packages="1" coveredconditionals="11" coveredmethods="47" elements="359" ncloc="497" files="7" conditionals="12" coveredstatements="298"/>
       <package name="tutorials">
-         <metrics coveredelements="354" complexity="52" loc="585" methods="47" classes="7" statements="297" coveredconditionals="10" coveredmethods="47" elements="354" ncloc="493" files="7" conditionals="10" coveredstatements="297"/>
+         <metrics coveredelements="356" complexity="53" loc="589" methods="47" classes="7" statements="300" coveredconditionals="11" coveredmethods="47" elements="359" ncloc="497" files="7" conditionals="12" coveredstatements="298"/>
          <file path="/home/phoudail/Projects/tutorials/src/test/java/tutorials/HashTableTest.java" name="HashTableTest.java">
-            <metrics coveredelements="35" coveredconditionals="2" complexity="8" loc="68" coveredmethods="7" methods="7" elements="35" classes="1" ncloc="56" statements="26" conditionals="2" coveredstatements="26"/>
+            <metrics coveredelements="37" coveredconditionals="3" complexity="9" loc="72" coveredmethods="7" methods="7" elements="40" classes="1" ncloc="60" statements="29" conditionals="4" coveredstatements="27"/>
             <class name="HashTableTest">
-               <metrics coveredelements="35" complexity="8" methods="7" testruns="6" statements="26" coveredconditionals="2" coveredmethods="7" elements="35" testfailures="0" testduration="0.001" conditionals="2" coveredstatements="26" testpasses="6"/>
+               <metrics coveredelements="37" complexity="9" methods="7" testruns="6" statements="29" coveredconditionals="3" coveredmethods="7" elements="40" testfailures="0" testduration="0.0" conditionals="4" coveredstatements="27" testpasses="6"/>
             </class>
             <line complexity="1" visibility="public" signature="init() : void" num="14" count="6" type="method"/>
             <line num="16" count="6" type="stmt"/>
-            <line complexity="1" visibility="public" signature="putEmptyTest() : void" num="19" testsuccess="true" count="1" testduration="0.001" type="method"/>
+            <line complexity="1" visibility="public" signature="putEmptyTest() : void" num="19" testsuccess="true" count="1" testduration="0.0" type="method"/>
             <line num="21" count="1" type="stmt"/>
             <line num="22" count="1" type="stmt"/>
             <line num="23" count="1" type="stmt"/>
@@ -471,120 +469,24 @@
             <line num="46" count="1" type="stmt"/>
             <line num="47" count="1" type="stmt"/>
             <line num="48" count="1" type="stmt"/>
-            <line complexity="2" visibility="public" signature="rehashTest() : void" num="51" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line complexity="3" visibility="public" signature="rehashTest() : void" num="51" testsuccess="true" count="1" testduration="0.0" type="method"/>
             <line num="53" count="1" type="stmt"/>
             <line falsecount="1" truecount="55" num="53" type="cond"/>
             <line num="54" count="55" type="stmt"/>
             <line num="56" count="1" type="stmt"/>
-            <line complexity="1" visibility="public" signature="getExceptTest() : void" num="59" testsuccess="true" count="1" testduration="0.0" type="method"/>
-            <line num="61" count="1" type="stmt"/>
-            <line complexity="1" visibility="public" signature="containsEmptyTest() : void" num="64" testsuccess="true" count="1" testduration="0.0" type="method"/>
-            <line num="66" count="1" type="stmt"/>
+            <line num="57" count="1" type="stmt"/>
+            <line falsecount="1" truecount="0" num="57" type="cond"/>
+            <line num="58" count="0" type="stmt"/>
+            <line num="59" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getExceptTest() : void" num="63" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="65" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="containsEmptyTest() : void" num="68" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="70" count="1" type="stmt"/>
          </file>
          <file path="/home/phoudail/Projects/tutorials/src/test/java/tutorials/LinkedListTest.java" name="LinkedListTest.java">
             <metrics coveredelements="94" coveredconditionals="0" complexity="12" loc="146" coveredmethods="12" methods="12" elements="94" classes="1" ncloc="125" statements="82" conditionals="0" coveredstatements="82"/>
             <class name="LinkedListTest">
                <metrics coveredelements="94" complexity="12" methods="12" testruns="11" statements="82" coveredconditionals="0" coveredmethods="12" elements="94" testfailures="0" testduration="0.002" conditionals="0" coveredstatements="82" testpasses="11"/>
-            </class>
-            <line complexity="1" visibility="public" signature="init() : void" num="16" count="11" type="method"/>
-            <line num="18" count="11" type="stmt"/>
-            <line complexity="1" visibility="public" signature="addTest() : void" num="21" testsuccess="true" count="1" testduration="0.0" type="method"/>
-            <line num="23" count="1" type="stmt"/>
-            <line num="24" count="1" type="stmt"/>
-            <line num="25" count="1" type="stmt"/>
-            <line num="26" count="1" type="stmt"/>
-            <line num="27" count="1" type="stmt"/>
-            <line num="28" count="1" type="stmt"/>
-            <line num="29" count="1" type="stmt"/>
-            <line complexity="1" visibility="public" signature="sizeTest() : void" num="32" testsuccess="true" count="1" testduration="0.0" type="method"/>
-            <line num="34" count="1" type="stmt"/>
-            <line num="35" count="1" type="stmt"/>
-            <line num="36" count="1" type="stmt"/>
-            <line num="37" count="1" type="stmt"/>
-            <line num="38" count="1" type="stmt"/>
-            <line num="39" count="1" type="stmt"/>
-            <line num="40" count="1" type="stmt"/>
-            <line num="41" count="1" type="stmt"/>
-            <line num="42" count="1" type="stmt"/>
-            <line complexity="1" visibility="public" signature="removeTest() : void" num="45" testsuccess="true" count="1" testduration="0.0" type="method"/>
-            <line num="47" count="1" type="stmt"/>
-            <line num="48" count="1" type="stmt"/>
-            <line num="49" count="1" type="stmt"/>
-            <line num="50" count="1" type="stmt"/>
-            <line num="51" count="1" type="stmt"/>
-            <line num="52" count="1" type="stmt"/>
-            <line num="53" count="1" type="stmt"/>
-            <line num="54" count="1" type="stmt"/>
-            <line num="55" count="1" type="stmt"/>
-            <line num="56" count="1" type="stmt"/>
-            <line num="57" count="1" type="stmt"/>
-            <line num="58" count="1" type="stmt"/>
-            <line num="59" count="1" type="stmt"/>
-            <line num="60" count="1" type="stmt"/>
-            <line num="61" count="1" type="stmt"/>
-            <line num="62" count="1" type="stmt"/>
-            <line num="63" count="1" type="stmt"/>
-            <line num="64" count="1" type="stmt"/>
-            <line num="65" count="1" type="stmt"/>
-            <line complexity="1" visibility="public" signature="removeAllTest() : void" num="68" testsuccess="true" count="1" testduration="0.0" type="method"/>
-            <line num="70" count="1" type="stmt"/>
-            <line num="71" count="1" type="stmt"/>
-            <line num="72" count="1" type="stmt"/>
-            <line num="73" count="1" type="stmt"/>
-            <line num="74" count="1" type="stmt"/>
-            <line num="75" count="1" type="stmt"/>
-            <line num="76" count="1" type="stmt"/>
-            <line num="77" count="1" type="stmt"/>
-            <line complexity="1" visibility="public" signature="getExceptTest() : void" num="80" testsuccess="true" count="1" testduration="0.001" type="method"/>
-            <line num="82" count="1" type="stmt"/>
-            <line num="83" count="1" type="stmt"/>
-            <line num="84" count="1" type="stmt"/>
-            <line num="85" count="1" type="stmt"/>
-            <line complexity="1" visibility="public" signature="getTest() : void" num="88" testsuccess="true" count="1" testduration="0.0" type="method"/>
-            <line num="90" count="1" type="stmt"/>
-            <line num="91" count="1" type="stmt"/>
-            <line num="92" count="1" type="stmt"/>
-            <line num="93" count="1" type="stmt"/>
-            <line num="94" count="1" type="stmt"/>
-            <line num="95" count="1" type="stmt"/>
-            <line num="96" count="1" type="stmt"/>
-            <line num="97" count="1" type="stmt"/>
-            <line num="98" count="1" type="stmt"/>
-            <line complexity="1" visibility="public" signature="setExceptTest() : void" num="101" testsuccess="true" count="1" testduration="0.0" type="method"/>
-            <line num="103" count="1" type="stmt"/>
-            <line num="104" count="1" type="stmt"/>
-            <line num="105" count="1" type="stmt"/>
-            <line num="106" count="1" type="stmt"/>
-            <line complexity="1" visibility="public" signature="setTest() : void" num="109" testsuccess="true" count="1" testduration="0.0" type="method"/>
-            <line num="111" count="1" type="stmt"/>
-            <line num="112" count="1" type="stmt"/>
-            <line num="113" count="1" type="stmt"/>
-            <line num="114" count="1" type="stmt"/>
-            <line num="115" count="1" type="stmt"/>
-            <line num="116" count="1" type="stmt"/>
-            <line complexity="1" visibility="public" signature="indexOfTest() : void" num="119" testsuccess="true" count="1" testduration="0.0" type="method"/>
-            <line num="121" count="1" type="stmt"/>
-            <line num="122" count="1" type="stmt"/>
-            <line num="123" count="1" type="stmt"/>
-            <line num="124" count="1" type="stmt"/>
-            <line num="125" count="1" type="stmt"/>
-            <line num="126" count="1" type="stmt"/>
-            <line complexity="1" visibility="public" signature="containsTest() : void" num="129" testsuccess="true" count="1" testduration="0.001" type="method"/>
-            <line num="131" count="1" type="stmt"/>
-            <line num="132" count="1" type="stmt"/>
-            <line num="133" count="1" type="stmt"/>
-            <line num="134" count="1" type="stmt"/>
-            <line num="135" count="1" type="stmt"/>
-            <line num="136" count="1" type="stmt"/>
-            <line complexity="1" visibility="public" signature="isEmptyTest() : void" num="139" testsuccess="true" count="1" testduration="0.0" type="method"/>
-            <line num="141" count="1" type="stmt"/>
-            <line num="142" count="1" type="stmt"/>
-            <line num="143" count="1" type="stmt"/>
-         </file>
-         <file path="/home/phoudail/Projects/tutorials/src/test/java/tutorials/LinkedListv2Test.java" name="LinkedListv2Test.java">
-            <metrics coveredelements="94" coveredconditionals="0" complexity="12" loc="146" coveredmethods="12" methods="12" elements="94" classes="1" ncloc="125" statements="82" conditionals="0" coveredstatements="82"/>
-            <class name="LinkedListv2Test">
-               <metrics coveredelements="94" complexity="12" methods="12" testruns="11" statements="82" coveredconditionals="0" coveredmethods="12" elements="94" testfailures="0" testduration="0.006" conditionals="0" coveredstatements="82" testpasses="11"/>
             </class>
             <line complexity="1" visibility="public" signature="init() : void" num="16" count="11" type="method"/>
             <line num="18" count="11" type="stmt"/>
@@ -669,7 +571,107 @@
             <line num="124" count="1" type="stmt"/>
             <line num="125" count="1" type="stmt"/>
             <line num="126" count="1" type="stmt"/>
-            <line complexity="1" visibility="public" signature="containsTest() : void" num="129" testsuccess="true" count="1" testduration="0.006" type="method"/>
+            <line complexity="1" visibility="public" signature="containsTest() : void" num="129" testsuccess="true" count="1" testduration="0.002" type="method"/>
+            <line num="131" count="1" type="stmt"/>
+            <line num="132" count="1" type="stmt"/>
+            <line num="133" count="1" type="stmt"/>
+            <line num="134" count="1" type="stmt"/>
+            <line num="135" count="1" type="stmt"/>
+            <line num="136" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="isEmptyTest() : void" num="139" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="141" count="1" type="stmt"/>
+            <line num="142" count="1" type="stmt"/>
+            <line num="143" count="1" type="stmt"/>
+         </file>
+         <file path="/home/phoudail/Projects/tutorials/src/test/java/tutorials/LinkedListv2Test.java" name="LinkedListv2Test.java">
+            <metrics coveredelements="94" coveredconditionals="0" complexity="12" loc="146" coveredmethods="12" methods="12" elements="94" classes="1" ncloc="125" statements="82" conditionals="0" coveredstatements="82"/>
+            <class name="LinkedListv2Test">
+               <metrics coveredelements="94" complexity="12" methods="12" testruns="11" statements="82" coveredconditionals="0" coveredmethods="12" elements="94" testfailures="0" testduration="0.005" conditionals="0" coveredstatements="82" testpasses="11"/>
+            </class>
+            <line complexity="1" visibility="public" signature="init() : void" num="16" count="11" type="method"/>
+            <line num="18" count="11" type="stmt"/>
+            <line complexity="1" visibility="public" signature="addTest() : void" num="21" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="23" count="1" type="stmt"/>
+            <line num="24" count="1" type="stmt"/>
+            <line num="25" count="1" type="stmt"/>
+            <line num="26" count="1" type="stmt"/>
+            <line num="27" count="1" type="stmt"/>
+            <line num="28" count="1" type="stmt"/>
+            <line num="29" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="sizeTest() : void" num="32" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="34" count="1" type="stmt"/>
+            <line num="35" count="1" type="stmt"/>
+            <line num="36" count="1" type="stmt"/>
+            <line num="37" count="1" type="stmt"/>
+            <line num="38" count="1" type="stmt"/>
+            <line num="39" count="1" type="stmt"/>
+            <line num="40" count="1" type="stmt"/>
+            <line num="41" count="1" type="stmt"/>
+            <line num="42" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="removeTest() : void" num="45" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="47" count="1" type="stmt"/>
+            <line num="48" count="1" type="stmt"/>
+            <line num="49" count="1" type="stmt"/>
+            <line num="50" count="1" type="stmt"/>
+            <line num="51" count="1" type="stmt"/>
+            <line num="52" count="1" type="stmt"/>
+            <line num="53" count="1" type="stmt"/>
+            <line num="54" count="1" type="stmt"/>
+            <line num="55" count="1" type="stmt"/>
+            <line num="56" count="1" type="stmt"/>
+            <line num="57" count="1" type="stmt"/>
+            <line num="58" count="1" type="stmt"/>
+            <line num="59" count="1" type="stmt"/>
+            <line num="60" count="1" type="stmt"/>
+            <line num="61" count="1" type="stmt"/>
+            <line num="62" count="1" type="stmt"/>
+            <line num="63" count="1" type="stmt"/>
+            <line num="64" count="1" type="stmt"/>
+            <line num="65" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="removeAllTest() : void" num="68" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="70" count="1" type="stmt"/>
+            <line num="71" count="1" type="stmt"/>
+            <line num="72" count="1" type="stmt"/>
+            <line num="73" count="1" type="stmt"/>
+            <line num="74" count="1" type="stmt"/>
+            <line num="75" count="1" type="stmt"/>
+            <line num="76" count="1" type="stmt"/>
+            <line num="77" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getExceptTest() : void" num="80" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="82" count="1" type="stmt"/>
+            <line num="83" count="1" type="stmt"/>
+            <line num="84" count="1" type="stmt"/>
+            <line num="85" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getTest() : void" num="88" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="90" count="1" type="stmt"/>
+            <line num="91" count="1" type="stmt"/>
+            <line num="92" count="1" type="stmt"/>
+            <line num="93" count="1" type="stmt"/>
+            <line num="94" count="1" type="stmt"/>
+            <line num="95" count="1" type="stmt"/>
+            <line num="96" count="1" type="stmt"/>
+            <line num="97" count="1" type="stmt"/>
+            <line num="98" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="setExceptTest() : void" num="101" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="103" count="1" type="stmt"/>
+            <line num="104" count="1" type="stmt"/>
+            <line num="105" count="1" type="stmt"/>
+            <line num="106" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="setTest() : void" num="109" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="111" count="1" type="stmt"/>
+            <line num="112" count="1" type="stmt"/>
+            <line num="113" count="1" type="stmt"/>
+            <line num="114" count="1" type="stmt"/>
+            <line num="115" count="1" type="stmt"/>
+            <line num="116" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="indexOfTest() : void" num="119" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="121" count="1" type="stmt"/>
+            <line num="122" count="1" type="stmt"/>
+            <line num="123" count="1" type="stmt"/>
+            <line num="124" count="1" type="stmt"/>
+            <line num="125" count="1" type="stmt"/>
+            <line num="126" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="containsTest() : void" num="129" testsuccess="true" count="1" testduration="0.005" type="method"/>
             <line num="131" count="1" type="stmt"/>
             <line num="132" count="1" type="stmt"/>
             <line num="133" count="1" type="stmt"/>
@@ -805,7 +807,7 @@
             <line complexity="1" visibility="public" signature="constrTest() : void" num="19" testsuccess="true" count="1" testduration="0.0" type="method"/>
             <line num="21" count="1" type="stmt"/>
             <line num="22" count="1" type="stmt"/>
-            <line complexity="2" visibility="public" signature="pushTest() : void" num="25" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line complexity="2" visibility="public" signature="pushTest() : void" num="25" testsuccess="true" count="1" testduration="0.001" type="method"/>
             <line num="27" count="1" type="stmt"/>
             <line num="28" count="1" type="stmt"/>
             <line num="29" count="1" type="stmt"/>
@@ -821,7 +823,7 @@
             <line num="39" count="1" type="stmt"/>
             <line num="40" count="1" type="stmt"/>
             <line num="41" count="1" type="stmt"/>
-            <line complexity="1" visibility="public" signature="popTest() : void" num="44" testsuccess="true" count="1" testduration="0.001" type="method"/>
+            <line complexity="1" visibility="public" signature="popTest() : void" num="44" testsuccess="true" count="1" testduration="0.0" type="method"/>
             <line num="46" count="1" type="stmt"/>
             <line num="47" count="1" type="stmt"/>
             <line num="48" count="1" type="stmt"/>

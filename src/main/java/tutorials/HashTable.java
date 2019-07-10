@@ -39,7 +39,7 @@ public class HashTable<K, V> {
 
     public boolean contains(K key) {
         int index = getIndex(key);
-        DoubleNode<K, V> cursor = array[index]];
+        DoubleNode<K, V> cursor = array[index];
         while(cursor != null) {
             if(cursor.key.equals(key)) { return true; }
             cursor = cursor.next;

@@ -3,12 +3,13 @@ package tutorials;
 import java.awt.dnd.InvalidDnDOperationException;
 import java.util.Iterator;
 
-public class StackIterator<T> implements Iterator<T> {
+public class StackNodeIterator<T> implements Iterator<T> {
 
-    private Stack<T> stack;
+    private StackNode<T> stack;
+    private Node<T> cursor;
     private boolean starting;
 
-    public StackIterator(Stack<T> stack) {
+    public StackNodeIterator(StackNode<T> stack) {
         this.stack = stack;
         this.starting = true;
     }
@@ -16,16 +17,18 @@ public class StackIterator<T> implements Iterator<T> {
     @Override
     public boolean hasNext() {
         if(starting) {
+            cursor = stack.getLast();
             starting = false;
-        } else { stack.pop(); }
-        return stack.peek() != null;
+            return cursor != null;
+        }
+        cursor = cursor.next;
+        return cursor != null;
     }
 
     @Override
     public T next() {
-        T result = stack.peek();
-        if(result != null) {
-            return result;
+        if(cursor != null) {
+            return cursor.value;
         }
         throw new InvalidDnDOperationException();
     }

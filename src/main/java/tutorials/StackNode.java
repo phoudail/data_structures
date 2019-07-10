@@ -7,6 +7,10 @@ public class StackNode<T> implements Stack<T> {
 
     public StackNode() { this.last = null; this.size = 0; }
 
+    public Node<T> getLast() {
+        return this.last;
+    }
+
     public void push(T item) {
         Node<T> toAdd = new Node<T>(item, last);
         last = toAdd;

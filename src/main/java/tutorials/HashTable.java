@@ -32,6 +32,10 @@ public class HashTable<K, V> {
 
     }
 
+    public DoubleNode<K, V>[] getArray() {
+        return array;
+    }
+
     private int getIndex(K key) {
         int hashCode = Math.abs(key.hashCode());
         return hashCode%array.length;

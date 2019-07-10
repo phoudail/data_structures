@@ -12,6 +12,10 @@ public class QueueArray<T> implements Queue<T> {
         last = -1;
     }
 
+    public Box<T>[] getArray() {
+        return array;
+    }
+
     public void add(T item) {
         last++;
         if(last >= array.length) {

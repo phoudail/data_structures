@@ -16,12 +16,12 @@ public class ArrayIterator<T> implements Iterator<T> {
     @Override
     public boolean hasNext() {
         index++;
-        return index < array.length-1;
+        return index < array.length;
     }
 
     @Override
     public T next() {
-        if(index >= 0 && index < array.length-1) {
+        if(index >= 0 && index < array.length) {
             return array[index];
         }
         throw new InvalidDnDOperationException();

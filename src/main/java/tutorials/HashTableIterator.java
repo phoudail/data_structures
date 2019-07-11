@@ -24,8 +24,8 @@ public class HashTableIterator<K, V> implements Iterator<DoubleNode<K, V>> {
             }
         } 
         while(cursor == null && index < array.length-1) {
-            cursor = array[index];
             index++;
+            cursor = array[index];
         }
         return cursor != null;
     }

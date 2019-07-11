@@ -6,12 +6,11 @@ import java.util.Iterator;
 public class QueueArrayIterator<T> implements Iterator<T> {
 
     private Box<T>[] array;
-    private boolean starting;
     private int index;
 
     public QueueArrayIterator(QueueArray<T> queue) {
         this.array = queue.getArray();
-        this.starting = true;
+        this.index = -1;
     }
 
     @Override
@@ -22,8 +21,12 @@ public class QueueArrayIterator<T> implements Iterator<T> {
 
     @Override
     public T next() {
-        if(index < array.length && index >= 0 && array[index] != null) {
-            return array[index].value;
+        if(index < array.length && index >= 0) {
+            if(array[index] == null) {
+                return null;
+            } else {
+                return array[index].value;
+            }
         }
         throw new InvalidDnDOperationException();
     }

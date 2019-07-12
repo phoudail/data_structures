@@ -18,7 +18,6 @@ public class HashTable<K, V> {
 
     public HashTable(int capacity) {
         this(capacity, DEFAULT_LOAD_FACTOR);
-
     }
 
     public HashTable(double loadFactor) {
@@ -29,7 +28,6 @@ public class HashTable<K, V> {
         this.array = new DoubleNode[capacity];
         this.loadArray = new int[capacity];
         this.loadFactor = loadFactor;
-
     }
 
     public DoubleNode<K, V>[] getArray() {
@@ -122,9 +120,7 @@ class DoubleNode<A, B> {
     DoubleNode<A, B> next;
 
     public DoubleNode(A key, B value) {
-        this.key = key;
-        this.value = value;
-        this.next = null;
+        this(key, value, null);
     }
 
     public DoubleNode(A key, B value, DoubleNode<A, B> next) {

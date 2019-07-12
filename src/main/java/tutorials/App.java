@@ -3,6 +3,30 @@ package tutorials;
 public class App {
     public static void main( String[] args ) {
 
+        System.out.println(Parenthesis.possibleParenthesis(2));
+        Integer[] array = {1, 2, 3, 4};
+        System.out.println(Permutations.possiblePermutations(array));
+
+    }
+
+    public void parenthesisCountTimeTest() {
+
+        long recursiveStart = System.currentTimeMillis();
+        for(int i = 0; i <= 100000; i++) {
+            Parenthesis.count(10);
+        }
+        long recursiveEnd = System.currentTimeMillis();
+        System.out.println(recursiveEnd - recursiveStart);
+        long dynamicStart = System.currentTimeMillis();
+        for(int i = 0; i <= 100000; i++) {
+            Parenthesis.dynamicCount(10);
+        }
+        long dynamicEnd = System.currentTimeMillis();
+        System.out.println(dynamicEnd - dynamicStart);
+
+    }
+
+    public void iteratorTest() {
         System.out.println("Range iterator test :");
         RangeIterator test = new RangeIterator(1, 9);
         while(test.hasNext()) {

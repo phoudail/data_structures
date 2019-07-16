@@ -3,13 +3,21 @@ package tutorials;
 public class App {
     public static void main( String[] args ) {
 
-        System.out.println(Parenthesis.possibleParenthesis(2));
         Integer[] array = {1, 2, 3, 4};
+        int[] currency = {1, 5, 10, 25};
+        int[] pay = Palindromes.coins(currency, 41);
+        for(int i = 0; i < pay.length; i++) {
+            System.out.print(pay[i] + " ");
+        }
+        System.out.println();
         System.out.println(Permutations.possiblePermutations(array));
+        System.out.println(Combinations.combiCount(4, 2));
+        System.out.println(Combinations.possibleCombi(array, 3));
+        System.out.println(Palindromes.findPalindrome("kayaksabbas"));
 
     }
 
-    public void parenthesisCountTimeTest() {
+    public static void parenthesisCountTimeTest() {
 
         long recursiveStart = System.currentTimeMillis();
         for(int i = 0; i <= 100000; i++) {
@@ -26,7 +34,7 @@ public class App {
 
     }
 
-    public void iteratorTest() {
+    public static void iteratorTest() {
         System.out.println("Range iterator test :");
         RangeIterator test = new RangeIterator(1, 9);
         while(test.hasNext()) {

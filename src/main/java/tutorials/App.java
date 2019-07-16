@@ -3,18 +3,23 @@ package tutorials;
 public class App {
     public static void main( String[] args ) {
 
-        Integer[] array = {1, 2, 3, 4};
-        int[] currency = {1, 5, 10, 25};
+        
+        int[] currency = {1, 5, 10, 20, 25};
         int[] pay = Palindromes.coins(currency, 41);
         for(int i = 0; i < pay.length; i++) {
             System.out.print(pay[i] + " ");
         }
         System.out.println();
+        System.out.println(Palindromes.findPalindrome("kayaksabas"));
+
+    }
+
+    public static void permuCombiTest() {
+        Integer[] array = {1, 2, 3, 4};
         System.out.println(Permutations.possiblePermutations(array));
         System.out.println(Combinations.combiCount(4, 2));
         System.out.println(Combinations.possibleCombi(array, 3));
-        System.out.println(Palindromes.findPalindrome("kayaksabbas"));
-
+        Permutations.permutations(3);
     }
 
     public static void parenthesisCountTimeTest() {
